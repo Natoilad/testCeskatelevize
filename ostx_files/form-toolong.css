@@ -1,0 +1,297 @@
+
+                .timerHolder {
+                    background: red !important;
+                    padding: 10px 25px;
+                    display: inline-block;
+                    border-radius: 5px;
+                }
+
+                .timerHolder span {
+                    display: block;
+                }
+
+                .timerHolder div {
+                    background: transparent !important;
+                    display: inline-block !important;
+                    border: 1px solid green;
+                    border-radius: 5px;
+                    padding: 5px;
+                }
+
+                .timerHolder .timerVal {
+                    font-size: 19px;
+                    font-weight: bold;
+                    color: #fff;
+                    margin: 0px 10px;
+                }
+
+                .timerHolder .timerSign {
+                    font-size: 10px;
+                    text-align: center;
+                    margin: 0px;
+                    color: #fff;
+                }
+
+                hr {
+                    padding: 0;
+                    border: none;
+                    border-top: medium double #333;
+                    color: #333;
+                    text-align: center;
+                }
+
+                .orderTypeButton {
+                    background-color: #e7e7e7 !important;
+                    display: inline-block;
+                    padding: 7px;
+                    margin-top: 15px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    max-width: 150px;
+                    position: relative;
+                    border: 2px solid #fff;
+                }
+
+                .otHead {
+                    font-size: 16px;
+                    display: block;
+                }
+
+                .otPrice {
+                    font-size: 22px;
+                }
+
+                .otCurr {
+                    font-size: 10px;
+                }
+
+                .orderTypeButton span {
+                    display: block;
+                    font-size: 12px;
+                    margin-top: 10px;
+                }
+
+                .otButton {
+                    cursor: pointer;
+                    font-size: 12px;
+                }
+
+                .orderTypeButtonActive {
+                    background: yellow !important;
+                    background-image: url(images/tick.png) !important;
+                    background-repeat: no-repeat !important;
+                    background-position: center bottom !important;
+                    border: 2px solid red;
+                }
+
+                .otFirst {
+                    margin-right: 15px;
+                }
+
+                .otTimerImg img {
+                    padding: 0px !important;
+                    margin: 0px !important;
+                }
+
+                .otTimerImg {
+                    position: absolute;
+                    top: -16px;
+                    right: -13px;
+                    width: 40px;
+                    padding: 0;
+                    margin: 0;
+                    background: transparent !important;
+                }
+
+                #content img {
+                    max-width: 100%;
+                    display: block;
+                    margin: 20px 0px;
+                }
+
+                #order_form {
+                    background: white;
+                    padding: 0px;
+                    font-family: Arial;
+                    display: inline-block;
+                    background-image: url(./bgform.jpg);
+                    background-size: cover;
+                    border-radius: 5px;
+                }
+
+                #order_form_place {
+                    padding: 10px;
+                    border: 0px solid red;
+                    border-radius: 5px;
+                    box-shadow: 4px 9px 5px 0px rgb(50 50 50 / 75%);
+                }
+
+                #order_form div {
+                    background: transparent !important;
+                }
+
+                #order_form .order_form_pole {
+                    padding: 10px;
+                    margin: 10px;
+                }
+
+                #order_form button,
+                .obutton {
+                    max-width: 336px;
+                    display: block;
+                    padding: 20px;
+                    color: #fff;
+                    font-weight: 700;
+                    text-decoration: none;
+                    box-shadow: 0 4px 15px 0 rgb(129 150 160 / 45%);
+                    border-radius: 5px;
+                    background-color: red;
+                    background-position: 1.35em 0.94em;
+                    background-size: 1em;
+                    background-repeat: no-repeat;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 20px;
+                    margin-top: 20px;
+                }
+
+                #order_form button:hover,
+                .obutton:hover {
+                    background-color: rgb(200, 0, 0);
+                }
+
+                .ittem-comment {
+                    display: block;
+                    position: relative;
+                    margin-bottom: 25px;
+                    min-height: 60px;
+                }
+
+                #order_form input {
+                    font-size: 21px;
+                    padding: 15px;
+                    border-radius: 3px;
+                    border: 2px solid #e9d7dc;
+                    max-width: 300px;
+                    width: 100%;
+                }
+
+                #order_form label {
+                    width: 282px;
+                    display: block;
+                    padding: 5px 0;
+                    font-weight: 700;
+                    font-size: 16px;
+                    text-align: left !important;
+                }
+
+                .ittem-comment p {
+                    display: block;
+                    position: relative;
+                    padding-left: 75px;
+                    margin-bottom: 5px;
+                    font-size: 90%;
+                    line-height: 1.3;
+                }
+
+                @media only screen and (max-width: 500px) {
+                    a.button {
+                        width: 100%;
+                    }
+                }
+
+                .ava-img {
+                    width: 60px !important;
+                    height: 60px !important;
+                    border-radius: 10px;
+                    display: block;
+                    position: relative !important;
+                    float: left;
+                    z-index: 1;
+                }
+
+                center h1,
+                center h2,
+                center h3,
+                center h4,
+                center h5,
+                center b,
+                center p,
+                center label,
+                center span {
+                    color: black;
+                }
+
+                @media only screen and (max-width: 500px) {
+                    #sf-main-header {
+                        border-bottom: 1px solid grey;
+                    }
+                }
+
+                @media (min-width: 1020px) {
+                    #PageContent_T0643CD2A003_Col00 {
+                        width: 66.6666666667%;
+                    }
+                }
+
+                @media (max-width: 1024px) {
+                    ul.content-list {
+                        width: 85%;
+                    }
+
+                    main {
+                        margin-top: 25px;
+                    }
+                }
+
+                .rub-ramka {
+                    background: rgba(200, 0, 224, 0.04);
+                    border-radius: 2px;
+                    border: 4px double rgba(160, 21, 21, 0.32);
+                    font-family: "open sans", arial;
+                    line-height: 28px;
+                    font-size: 16px;
+                    max-width: 80%;
+                    margin: 0px auto 20px;
+                    font-weight: 400;
+                    color: rgb(74, 74, 74);
+                    text-indent: 0px !important;
+                    padding: 6px 13px 18px !important;
+                }
+
+                .myh4 {
+                    text-indent: 0px;
+                    padding: 9px 0px 6px 12px;
+                    width: 100%;
+                    display: table;
+                    border-width: 1px 0px;
+                    border-top-style: dotted;
+                    border-bottom-style: dotted;
+                    border-top-color: rgb(226, 226, 226);
+                    border-bottom-color: rgb(226, 226, 226);
+                    border-image: initial;
+                    border-right-style: initial;
+                    border-right-color: initial;
+                    color: rgb(49, 49, 49);
+                    margin-top: 10px;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    line-height: 23px;
+                    margin-bottom: 15px;
+                    border-radius: 2px;
+                    border-left-style: initial;
+                    border-left-color: initial;
+                    margin-left: 0px;
+                    font-weight: 600;
+                    background-color: rgb(245, 254, 245);
+                    background-image: repeating-linear-gradient(
+                        90deg,
+                        rgb(234, 180, 180) 0px,
+                        rgb(245, 254, 245) 100%
+                    );
+                }
+
+                html {
+                    scroll-behavior: smooth;
+                }
+            
