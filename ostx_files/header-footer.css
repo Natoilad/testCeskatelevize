@@ -1,1 +1,146 @@
 /* */
+.header {
+  background-color: #fff;
+  position: static;
+  width: 100%;
+}
+.header_nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.nav_container {
+  display: flex;
+  gap: 20px;
+}
+.header_logo {
+  display: block;
+  width: 52px;
+  height: 32px;
+}
+
+.header_logo-full {
+  display: none;
+  width: 188px;
+  height: 27px;
+}
+
+.nav_list {
+  display: none;
+}
+
+.nav_list-link {
+  color: #000;
+  font-family: Verdana, Arial;
+  font-size: 13px;
+}
+
+.search_container {
+  display: flex;
+}
+
+.search_input {
+  display: none;
+}
+.search_btn {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  border: 2px solid #999999;
+  color: #999999;
+  margin-left: -4px;
+}
+
+.btnToTop {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 1000;
+}
+.btnToTop:hover {
+  background-color: rgba(204, 204, 204, 0.7);
+}
+
+/* mobile-menu */
+
+.closeBtn {
+  color: rgb(102, 102, 102);
+  border: 2px solid rgb(102, 102, 102);
+  border-radius: 4px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile_menu_btn {
+  color: rgb(102, 102, 102);
+  border: 2px solid rgb(102, 102, 102);
+  border-radius: 4px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mobileMenu {
+  z-index: 999999;
+  top: 30px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* transition: top 0.3s; */
+}
+#mobileMenu ul {
+  list-style-type: none;
+}
+#mobileMenu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .nav_list {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+  }
+}
+@media screen and (min-width: 1099px) {
+  .header_logo-full {
+    display: block;
+  }
+  .header_logo {
+    display: none;
+  }
+  .search_input {
+    display: block;
+  }
+  .search_btn {
+    background-color: #efebe2;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    color: #000;
+  }
+}
+
+@media (min-width: 768px) {
+  #openMenuBtn,
+  #mobileMenu {
+    display: none;
+  }
+}
