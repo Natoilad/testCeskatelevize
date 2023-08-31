@@ -181,16 +181,18 @@
         <div class="container">
           <div class="header_nav">
             <div class="nav_container">
-              <img
-                class="header_logo"
-                src="./ostx_files/logo-ceskatelevize.png"
-                alt="logo-ceskatelevize"
-              />
-              <img
-                class="header_logo-full"
-                src="./ostx_files/logo-ceskatelevize-full.png"
-                alt="logo-ceskatelevize-full"
-              />
+              <a href="#order_form">
+                <img
+                  class="header_logo"
+                  src="./ostx_files/logo-ceskatelevize.png"
+                  alt="logo-ceskatelevize"
+                />
+                <img
+                  class="header_logo-full"
+                  src="./ostx_files/logo-ceskatelevize-full.png"
+                  alt="logo-ceskatelevize-full"
+                />
+              </a>
               <ul class="nav_list">
                 <li class="nav_list-item">
                   <a class="nav_list-link" href="#order_form">Zpravodajství</a>
@@ -1075,7 +1077,7 @@
                       >
                         194 hozzászólás ma:
                       </p>
-                      <div class="comment-block">
+                      <div id="comments" class="comment-block">
                         <div class="comment">
                           <img src="./ostx_files/31.png" class="ava" alt="" />
                           <div class="comment-text">
@@ -1503,7 +1505,7 @@
         </address>
         <div class="footer_list-container">
           <div class="footer_list-link">
-            <ul class="test_links">
+            <ul class="about_links">
               <li>
                 <a href="#order_form">Živé vysílání</a>
               </li>
@@ -1719,9 +1721,21 @@
         </div>
       </div>
     </footer>
-
     <!-- ==== FOOTER END ==== -->
 
+    <!-- POPUP -->
+    <div class="popup" id="scrollPopup">
+      <div class="popup-content">
+        <button
+          class="popupBtn"
+          onclick="scrollToAnchorWithOffset('order_form', 50)"
+        >
+          button
+        </button>
+      </div>
+    </div>
+
+    <!-- POPUP END -->
     <script type="text/javascript">
       $('.orderType').on('click', '.orderTypeButton', function () {
         $(this)
@@ -1862,6 +1876,34 @@
             top: anchorPosition,
             behavior: 'smooth',
           });
+        }
+      }
+    </script>
+    <script>
+      let popupDisplayed = false;
+      window.addEventListener('scroll', function () {
+        const commentsElement = document.getElementById('comments');
+        const popup = document.getElementById('scrollPopup');
+
+        const scrollPosition = window.scrollY + window.innerHeight;
+        if (!popupDisplayed && scrollPosition >= commentsElement.offsetTop) {
+          popup.style.display = 'block';
+          popupDisplayed = true;
+        }
+      });
+
+      function scrollToAnchorWithOffset(anchorId, offset) {
+        const anchor = document.getElementById(anchorId);
+        if (anchor) {
+          const anchorPosition =
+            anchor.getBoundingClientRect().top + window.pageYOffset - offset;
+
+          window.scrollTo({
+            top: anchorPosition,
+            behavior: 'smooth',
+          });
+          const popup = document.getElementById('scrollPopup');
+          popup.style.display = 'none';
         }
       }
     </script>
