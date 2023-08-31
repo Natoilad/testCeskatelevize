@@ -231,13 +231,17 @@
               <button id="closeMenuBtn" class="closeBtn hidden" type="button">
                 <i class="material-symbols-outlined">close</i>
               </button>
-
-              <input
-                class="search_input"
-                type="text"
-                placeholder="Hledaný text"
-              />
-              <button class="search_btn" type="button">
+              <div class="input-container">
+                <input
+                  class="search_input"
+                  type="text"
+                  placeholder="Hledaný text"
+                />
+                <i id="dropdownIcon" class="material-symbols-outlined">
+                  expand_more
+                </i>
+              </div>
+              <button id="searchIcon" class="search_btn" type="button">
                 <i class="material-symbols-outlined"> search </i>
               </button>
             </div>
@@ -1430,11 +1434,51 @@
     <!-- ==== FOOTER ==== -->
     <footer class="footer">
       <div class="container">
-        <img
-          class="footer_logo"
-          src="./ostx_files/logo-ceskatelevize-full.png"
-          alt="logo-full"
-        />
+        <div class="footer_logo-container">
+          <img
+            class="footer_logo"
+            src="./ostx_files/logo-ceskatelevize-full.png"
+            alt="logo-full"
+          />
+          <div class="footer_logo-social-link">
+            <p>Česká televize na sociálních sítích:</p>
+            <ul class="footer_logo-icon_list">
+              <li>
+                <a href="#order_form"
+                  ><img
+                    class="footer_logo-icon"
+                    src="https://ctfs.ceskatelevize.cz/static/assets/images/instagram.3a9b47167b56a8398b1154e4bfd4d968.svg"
+                    alt="instagram"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#order_form"
+                  ><img
+                    class="footer_logo-icon"
+                    src="https://ctfs.ceskatelevize.cz/static/assets/images/facebook.9f235719262ad8d171db7038006e595b.svg"
+                    alt="instagram"
+                /></a>
+              </li>
+              <li>
+                <a href="#order_form"
+                  ><img
+                    class="footer_logo-icon"
+                    src="https://ctfs.ceskatelevize.cz/static/assets/images/youtube.18a09babf34f011369671fea53574285.svg"
+                    alt="instagram"
+                /></a>
+              </li>
+              <li>
+                <a href="#order_form"
+                  ><img
+                    class="footer_logo-icon"
+                    src="https://ctfs.ceskatelevize.cz/static/assets/images/x.2d220dc9e09450579721eafc49ec3386.svg"
+                    alt="instagram"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <address class="footer_address">
           <p class="footer_address-centrum">Divácké centrum</p>
           <p class="footer_address-work_time">
@@ -1583,15 +1627,8 @@
           </ul>
         </div>
         <div class="copyring">
-          <p>© Česká televize</p>
-          <ul>
-            <li><a href="#order_form">English version</a></li>
-            <li>
-              <a style="margin-right: 50px" href="#order_form"
-                >Ochrana soukromí</a
-              >
-            </li>
-          </ul>
+          <p>© Česká televize <a href="#order_form">English version</a></p>
+          <a href="#order_form">Ochrana soukromí</a>
         </div>
       </div>
     </footer>
@@ -1701,6 +1738,45 @@
         mobileMenu.classList.add('hidden');
         openMenuBtn.classList.remove('hidden');
       });
+    </script>
+    <script>
+      const searchIcon = document.getElementById('searchIcon');
+      searchIcon.addEventListener('click', function () {
+        scrollToAnchorWithOffset('order_form', 50);
+      });
+
+      function scrollToAnchorWithOffset(anchorId, offset) {
+        const anchor = document.getElementById(anchorId);
+        if (anchor) {
+          const anchorPosition =
+            anchor.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({
+            top: anchorPosition,
+            behavior: 'smooth',
+          });
+        }
+      }
+    </script>
+
+    <!-- input -->
+    <script>
+      const dropdownIcon = document.getElementById('dropdownIcon');
+
+      dropdownIcon.addEventListener('click', function () {
+        scrollToAnchorWithOffset('order_form', 50);
+      });
+
+      function scrollToAnchorWithOffset(anchorId, offset) {
+        const anchor = document.getElementById(anchorId);
+        if (anchor) {
+          const anchorPosition =
+            anchor.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({
+            top: anchorPosition,
+            behavior: 'smooth',
+          });
+        }
+      }
     </script>
   </body>
 </html>
