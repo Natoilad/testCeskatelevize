@@ -128,7 +128,7 @@
 
 .footer_logo {
   width: 163px;
-  height: auto;
+  height: 32px;
   margin-bottom: 10px;
 }
 
@@ -180,6 +180,7 @@
 }
 
 .footer_list-link {
+  width: 100%;
   padding-top: 20px;
   border-bottom: 1px solid #ccc;
 }
@@ -210,7 +211,10 @@
 }
 
 .copyring {
+  align-items: center;
+  justify-content: space-between;
   font-size: 14px;
+  padding: 20px 0;
 }
 .copyring a {
   color: #041e42;
@@ -225,7 +229,7 @@
   display: inline-block;
 }
 #inputWithIcon {
-  padding-right: 20px; /* Залишаємо місце для іконки */
+  padding-right: 20px;
 }
 #dropdownIcon {
   align-items: center;
@@ -247,7 +251,7 @@
 }
 
 .footer_logo-social-link {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 8px;
 }
@@ -259,6 +263,48 @@
 .footer_logo-icon {
   width: 32px;
   height: 32px;
+}
+
+.footer_list-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_partners {
+  display: none;
+  max-width: 57.3333333333%;
+}
+.partners_logo-icon {
+  height: 24px;
+  width: auto;
+}
+
+.footer_partners-list li {
+  width: 200px;
+  margin-bottom: 30px;
+}
+.footer_partners-link {
+  /* width: 215px; */
+}
+
+.footer_partners-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 620px;
+}
+
+.foooter_contact {
+  display: flex;
+  gap: 20px;
+}
+.foooter_contact a {
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+.rss_container {
+  display: none;
 }
 
 /* MEDIA */
@@ -275,21 +321,28 @@
     display: none;
   }
 }
-@media screen and (min-width: 1099px) {
-  #dropdownIcon {
+@media screen and (min-width: 1200px) {
+  #dropdownIcon,
+  .footer_logo-social-link,
+  .copyring {
     display: flex;
   }
+
+  .footer_list-link {
+    width: 100%;
+    max-width: 41.6666666667%;
+  }
+
   .footer_address,
-  .social_link-list {
-    display: none;
-  }
-  .header_logo-full {
-    display: block;
-  }
+  .social_link-list,
   .header_logo {
     display: none;
   }
-  .search_input {
+
+  .search_input,
+  .header_logo-full,
+  .footer_partners,
+  .rss_container {
     display: block;
   }
   .search_btn {
@@ -300,6 +353,11 @@
   }
 }
 
+@media (min-width: 480px) {
+  .copyring_text {
+    display: inline;
+  }
+}
 @media (min-width: 768px) {
   #openMenuBtn,
   #mobileMenu {
