@@ -1641,12 +1641,12 @@
                 </li>
               </ul>
             </div>
-            <address class="foooter_address">
+            <address class="">
               <p class="footer_address-centrum">Divácké centrum</p>
               <p class="footer_address-work_time">
                 každý všední den: 7:30—17:30 hodin
               </p>
-              <ul class="foooter_contact">
+              <ul class="footer_contacts">
                 <li>
                   <a class="footer_contact-link" href="#order_form"
                     ><i class="material-symbols-outlined footer_contact-icon">
@@ -1707,14 +1707,13 @@
             </li>
           </ul>
         </div>
-        <div class="copyring">
-          <div class="copyring_container">
-            <p class="copyring_text">
+        <div class="copyright">
+          <div class="copyright_container">
+            <p class="copyright_text">
               © Česká televize <a href="#order_form">English version</a>
             </p>
             <a href="#order_form">Ochrana soukromí</a>
           </div>
-
           <p class="rss_container">
             <a href="#order_form">Mapa stránek</a><a href="#order_form">RSS</a>
           </p>
@@ -1803,20 +1802,18 @@
         });
       });
     </script>
-
     <!-- other js -->
-
     <script>
-      let backToTopButton = document.getElementById('backToTop');
+      let backToTopBtn = document.getElementById('backToTop');
       window.addEventListener('scroll', function () {
         if (window.scrollY > 200) {
-          backToTopButton.style.display = 'flex';
+          backToTopBtn.style.display = 'flex';
         } else {
-          backToTopButton.style.display = 'none';
+          backToTopBtn.style.display = 'none';
         }
       });
 
-      backToTopButton.addEventListener('click', function () {
+      backToTopBtn.addEventListener('click', function () {
         window.scrollTo({
           top: 0,
           behavior: 'smooth',
@@ -1858,8 +1855,6 @@
         }
       }
     </script>
-
-    <!-- input -->
     <script>
       const dropdownIcon = document.getElementById('dropdownIcon');
 
